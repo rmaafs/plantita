@@ -23,6 +23,10 @@ locacion="${path}/fotos/foto${iter}.jpg"
 #Tomamos la foto
 fswebcam --no-banner -r 176x144 --jpeg 100 -S 23 ${locacion}
 
+#Le grabamos la leyenda con la fecha actual
+DATE=$(date +"%d/%m/%Y")
+convert ${locacion} -font arial.ttf -pointsize 10 -fill white -annotate +0+142 $DATE ${locacion}
+
 #Aumentamos el contador de fotos
 iter=$((iter+1))
 #Guardamos el contador en el archivo
