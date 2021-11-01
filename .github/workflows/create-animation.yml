@@ -20,14 +20,15 @@ jobs:
         with:
           persist-credential: false
 
-      - name: 📺 Generar GIF
-      - uses: FedericoCarboni/setup-ffmpeg@v1
+      - name: 👷‍♂️ Instalar ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v1
         with:
-          # Not strictly necessary, but it may prevent rate limit
-          # errors especially on GitHub-hosted macos machines.
           token: ${{ secrets.GITHUB_TOKEN }}
         id: setup-ffmpeg
-      - run: sh video.sh
+          
+      - name: 📺 Generar GIF
+        run: |
+          sh video.sh
           
       - name: 📄 Crear Pull Request
         uses: peter-evans/create-pull-request@v3
