@@ -28,7 +28,6 @@ jobs:
           
       - name: 📺 Generar GIF
         run: |
-          ls
           sh video.sh
           
       - name: 📄 Crear Pull Request
