@@ -38,9 +38,7 @@ jobs:
           delete-branch: true
           commit-message: Nueva animación generada
           title: Nueva animación generada
-          body: |
-            Se ha generado automáticamente una nueva animación con 7 días de duración.
-
-	    ![imagen](https://github.com/rmaafs/plantita/blob/animation/final3.gif?raw=true)
+          body:
+            'Se ha generado automáticamente una nueva animación con 7 días de duración.\n![imagen](https://github.com/rmaafs/plantita/blob/animation/final3.gif?raw=true)'
           labels: animation
           reviewers: rmaafs
