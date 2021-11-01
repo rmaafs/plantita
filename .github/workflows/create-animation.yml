@@ -1,0 +1,35 @@
+name: 🌱 Generar animación
+on:
+  schedule:
+    #Cada semana
+    - cron:  '* * 7,14,21,28 * *'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: 🔽 Descargar proyecto
+        uses: actions/checkout@v2
+        with:
+          persist-credential: false
+
+      - name: 📺 Generar GIF
+        run: |
+          sh video.sh
+          
+      - name: 📄 Crear Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: animation
+          base: master
+          delete-branch: true
+          commit-message: Nueva animación generada
+          title: Nueva animación generada
+          body: |
+            Se ha generado automáticamente una nueva animación con 7 días de duración.
+          labels: animation
+          reviewers: rmaafs
