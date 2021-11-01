@@ -2,7 +2,7 @@ name: 🌱 Generar animación
 on:
   schedule:
     #Cada semana
-    - cron:  '* * 7,14,21,28 * *'
+    - cron:  '37 * 7,14,21,28 * *'
 
 jobs:
   build-and-deploy:
