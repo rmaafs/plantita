@@ -1,6 +1,8 @@
 # plantita
 Timelapse de cómo va creciendo mi plantita
 
+![Primera versión](https://github.com/rmaafs/plantita/blob/master/final3.gif?raw=true)
+
 ![image](https://user-images.githubusercontent.com/47652130/133953731-6ae09009-99f5-4d41-ae31-c9354ca07415.png)
 
 
