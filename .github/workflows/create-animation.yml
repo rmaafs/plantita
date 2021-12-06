@@ -2,7 +2,9 @@ name: 🌱 Generar animación
 on:
   schedule:
     #Cada semana
-    - cron:  '0 22 1,8,15,22 * *'
+    #- cron:  '0 22 1,8,15,22 * *'
+    #Desactivar momentaneamente
+    - cron:  '0 0 1 12 *'
 
 jobs:
   generar-animacion:
